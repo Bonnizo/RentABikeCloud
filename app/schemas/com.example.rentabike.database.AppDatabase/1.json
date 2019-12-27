@@ -1,0 +1,129 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "30b3c448ee32d072f1b4d61ccf74e964",
+    "entities": [
+      {
+        "tableName": "bikes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `description` TEXT, `size` TEXT, `bikePicture` BLOB)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bikePicture",
+            "columnName": "bikePicture",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "rents",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`rentId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `firstNameClient` TEXT, `lastNameClient` TEXT, `clientNumber` TEXT, `dateRent` TEXT, `bikeRented_id` INTEGER NOT NULL, FOREIGN KEY(`bikeRented_id`) REFERENCES `bikes`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "rentId",
+            "columnName": "rentId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstNameClient",
+            "columnName": "firstNameClient",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastNameClient",
+            "columnName": "lastNameClient",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "clientNumber",
+            "columnName": "clientNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dateRent",
+            "columnName": "dateRent",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bikeRentedId",
+            "columnName": "bikeRented_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "rentId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_rents_bikeRented_id",
+            "unique": false,
+            "columnNames": [
+              "bikeRented_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_rents_bikeRented_id` ON `${TABLE_NAME}` (`bikeRented_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "bikes",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "bikeRented_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '30b3c448ee32d072f1b4d61ccf74e964')"
+    ]
+  }
+}

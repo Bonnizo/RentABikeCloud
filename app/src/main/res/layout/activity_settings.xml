@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".ui.SettingsActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Settings"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/NightMode"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorText"
+            android:textSize="22sp"/>
+
+
+        <Button
+            android:id="@+id/night_on"
+            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:text="@string/ButtonON"
+            android:layout_marginRight="9dp"
+            android:textColor="@color/colorTextButton"
+            android:background="@color/colorBackgroundButton"
+            android:layout_gravity="left"/>
+
+        <Button
+            android:id="@+id/night_off"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="@string/ButtonOFF"
+            android:textColor="@color/colorTextButton"
+            android:background="@color/colorBackgroundButton"
+            android:layout_gravity="left"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

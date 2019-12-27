@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">RentABike</string>
+
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="date">Date</string>
+    <string name="number">Phone number</string>
+
+    <string name="InformationAbout">Information about application :</string>
+    <string name="Langue">Language :</string>
+    <string name="myLangue">English</string>
+    <string name="Version">Version :</string>
+    <string name="myVersion">1.0</string>
+    <string name="TitleApp">Bike rental</string>
+    <string name="IDRent">ID</string>
+    <string name="DeveloppedBY">Developped by :</string>
+    <string name="myDeveloppedBY">Victor and Yevheniy </string>
+    <string name="DeveloppedFor">Developped for :</string>
+    <string name="myDeveloppedFor">Bike rental - Sierre</string>
+    <string name="Contact">Contact :</string>
+    <string name="myContact">yevheniy@gmail.com</string>
+
+    <string name="InformationBike">Information about the bike :</string>
+    <string name="NameBike">Name of the bike</string>
+    <string name="Description">Description</string>
+    <string name="InformationSize">Size of the bike :</string>
+    <string name="Size">Size</string>
+
+    <string name="Settings">Settings</string>
+    <string name="NightMode">Activate night mode</string>
+    ButtonLocationBike
+    <string name="button_demarrer">Start</string>
+    <string name="ButtonInfoAbout">Click for app info</string>
+    <string name="ButtonON">On</string>
+    <string name="ButtonOFF">Off</string>
+    <string name="ButtonBookBike">Book the bike</string>
+    <string name="ButtonShowBike">Show bike</string>
+    <string name="ButtonAddImageBike">Upload Image</string>
+    <string name="ButtonLocationBike">Show location</string>
+
+    <string name="sizeBike">Bike size</string>
+    <string-array name="sizeAvailable">
+        <item>S (less than 150cm)</item>
+        <item>M (between 150 and 180cm)</item>
+        <item>L (more than 180cm)</item>
+    </string-array>
+</resources>

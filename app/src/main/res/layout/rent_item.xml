@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardviewItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="8dp"
+    android:background="@color/colorBackground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_lastname"
+                android:layout_width="310dp"
+                android:layout_height="40dp"
+                android:text="@string/lastname"
+                android:textColor="@color/colorText"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/button_edit_rent"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackgroundButton"
+                app:srcCompat="@android:drawable/ic_menu_edit" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/text_view_firstname"
+                android:layout_width="310dp"
+                android:layout_height="40dp"
+                android:text="@string/firstname"
+                android:textColor="@color/colorText"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/button_delete_rent"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackgroundButton"
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_number"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/number"
+            android:textColor="@color/colorText"
+            android:textSize="22sp" />
+
+
+        <TextView
+            android:id="@+id/text_view_date"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="@string/date"
+            android:textColor="@color/colorText"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/text_view_rentid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/IDRent"
+            android:textColor="@color/colorText" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

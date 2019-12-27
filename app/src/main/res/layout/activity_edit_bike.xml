@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:paddingTop="40dp"
+    tools:context=".ui.Bike.EditBikeActivity">
+
+
+    <EditText
+        android:id="@+id/edit_bike_name"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="@string/NameBike"
+        android:inputType="text"
+        android:maxLength="14"
+        android:textColor="@color/colorText"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+
+    <ImageView
+        android:id="@+id/imageViewEdit"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:maxWidth="400dp"
+        android:maxHeight="300dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"/>
+
+
+    <Button
+        android:id="@+id/uploadImage2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundButton"
+        android:textColor="@color/colorTextButton"
+        android:layout_marginTop="10dp"
+        android:text="@string/ButtonAddImageBike" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/InformationBike"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/edit_bike_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Description"
+        android:textSize="22sp"
+        android:maxLength="60"
+        android:textColor="@color/colorText"
+        android:inputType="textMultiLine" />
+
+    <com.wafflecopter.charcounttextview.CharCountTextView
+        android:id="@+id/tvTextCounter_description"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:paddingRight="5dp"
+        app:maxCharacters="60"
+        android:textColor="@color/colorText"
+        android:textAlignment="textEnd"
+        app:exceededTextColor="#979797" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/InformationSize"
+        android:textSize="18sp"
+        android:textColor="@color/colorText"
+        android:textStyle="italic" />
+
+
+    <Spinner
+        android:id="@+id/edit_bike_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Size"
+        android:textColor="@color/colorText"
+        android:textSize="30sp"
+        android:inputType="text"/>
+</LinearLayout>
