@@ -14,10 +14,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.rentabike.R;
 import com.example.rentabike.database.entity.RentEntity;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -44,7 +49,7 @@ public class EditRentActivity extends AppCompatActivity {
     private TextView editTextDate;
     private EditText editTextNumbero;
     private String dateTemp;
-
+    private DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,17 +138,6 @@ public class EditRentActivity extends AppCompatActivity {
         String idRent = getIntent().getStringExtra(EDIT_EXTRA_RENTID);
         String idBikerented = getIntent().getStringExtra(EDIT_EXTRA_RENTBIKEID);
 
-     /*   AppDatabase appDb = AppDatabase.getInstance(this);
-        RentEntity rentEntity = appDb.rentDao().findRentExist(date, idBikerented);
-
-        if(!dateTemp.equals(date)) {
-            if (rentEntity.getDateRent() != null) {
-                Toast.makeText(this, "The bike is already rented at this date", Toast.LENGTH_SHORT).show();
-                return;
-            }
-        }
-
-*/
 
 
         data.putExtra(EDIT_EXTRA_RENTID, idRent);

@@ -49,11 +49,14 @@ public class RentEntity {
         this.rentId = rentId;
     }
 
+
+
+
     public String getFirstNameClient() {
         return firstNameClient;
     }
 
-    public void setFirstNameClient(String FirstnameClient) {
+    public void setFirstNameClient(String firstNameClient) {
         this.firstNameClient = firstNameClient;
     }
 

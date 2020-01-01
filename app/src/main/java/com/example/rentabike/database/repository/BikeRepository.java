@@ -9,6 +9,8 @@ import com.example.rentabike.database.LiveData.BikeListLiveData;
 import com.example.rentabike.database.entity.BikeEntity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.List;
 
@@ -49,6 +51,17 @@ public class BikeRepository {
                 .getReference("bikes")
                 .child(bike.getId())
                 .removeValue();
+
+        //delete image store in Storage
+        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
+        StorageReference storageReferenceProfilePic = firebaseStorage.getReference();
+        StorageReference imageRef = storageReferenceProfilePic.child(bike.getImage());
+
+
+        imageRef.delete();
+
+
+
     }
 
 
